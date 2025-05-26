@@ -3,7 +3,6 @@ const app = document.querySelector('.app');
 function crSel(element) {
     return document.querySelector(element);
 }
-app.textContent = "Server is running";
 function generateEle(element) {
     const ele = document.createElement(element.tag);
     ele.classList.add(element.tagClass);
@@ -14,8 +13,11 @@ function generateEle(element) {
 }
 // clock contianer
 const clockBlock = generateEle({ tag: "DIV", tagClass: "clock-block" });
-const clockContianer = generateEle({ tag: "DIV", tagClass: "clock-container" });
-const clockHeaderContianer = generateEle({ tag: "DIV", tagClass: "clock-header-container" });
+const clockContainer = generateEle({ tag: "DIV", tagClass: "clock-container" });
+const clockHeaderContainer = generateEle({ tag: "DIV", tagClass: "clock-header-container" });
+app.appendChild(clockContainer);
+clockContainer.appendChild(clockHeaderContainer);
+clockContainer.appendChild(clockBlock);
 function clock() {
 }
 clock();

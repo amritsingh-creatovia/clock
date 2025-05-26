@@ -3,8 +3,7 @@
 const app = document.querySelector('.app') as HTMLElement;
 function crSel(element:string){
     return document.querySelector(element);
-} 
-app.textContent = "Server is running";
+}
 
 
 // utility function 
@@ -28,8 +27,13 @@ function generateEle(element: newEle):HTMLElement{
 // clock contianer
 
 const clockBlock = generateEle({tag:"DIV", tagClass: "clock-block"});
-const clockContianer = generateEle({tag:"DIV", tagClass: "clock-container"});
-const clockHeaderContianer = generateEle({tag:"DIV", tagClass: "clock-header-container"});
+const clockContainer = generateEle({tag:"DIV", tagClass: "clock-container"});
+const clockHeaderContainer = generateEle({tag:"DIV", tagClass: "clock-header-container"});
+
+app.appendChild(clockContainer);
+clockContainer.appendChild(clockHeaderContainer);
+clockContainer.appendChild(clockBlock);
+
 
 function clock(){
     

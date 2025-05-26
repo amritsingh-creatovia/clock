@@ -1,0 +1,40 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+*::before, *::after{
+   box-sizing: border-box;
+}
+
+
+:root{
+    --color-100:#ffffff;
+    --color-200:#efefef;
+    --color-300: #212121;
+    --color-400:#313131;
+}
+
+body{
+    color:var(--color-200);
+}
+
+.app{
+    height: 100vh;
+    width: 100vw;
+    padding:15px;
+    background-color: var(--color-300);
+    display: flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+.clock-container{
+    background-color:var(--color-400);
+    width:100%;
+    max-width: 300px;
+    padding:15px;
+
+}
+
